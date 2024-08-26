@@ -1,11 +1,11 @@
 /* ==UserStyle==
-@name           SR_UI_Extra
-@description    对sr_ui修改的一部分内容进行修改
+@name           StarRailUIExtra
+@description    针对安装仿星穹铁道短信UI与其他主题冲突及部分特性进行修改
 @preprocessor   transitio
 @version        1.0
 @author         yhz_cake
-@homepageURL    none
-@license     	  MIT
+@homepageURL    https://github.com/yhzcake/Transitio-user-css/#sr_ui_extra
+@license     	  gpl-3.0
 @var raw light_background-img "亮色背景图" "url()"
 @var raw dark_background-img "暗色背景图" "url()"
 ==/UserStyle== */
