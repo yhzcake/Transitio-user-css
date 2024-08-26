@@ -1,0 +1,76 @@
+/* ==UserStyle==
+@name           SR_UI_Extra
+@description    对sr_ui修改的一部分内容进行修改
+@preprocessor   transitio
+@version        1.0
+@author         yhz_cake
+@homepageURL    none
+@license     	  MIT
+@var raw light_background-img "亮色背景图" "url()"
+@var raw dark_background-img "暗色背景图" "url()"
+==/UserStyle== */
+@media (prefers-color-scheme: dark) {
+  #app > .container::before {
+    background-image: var(--dark_background-img) !important;
+  }
+  .window-control-area:hover {
+    opacity: 100%;
+    background-color: rgb(0, 0, 0, 0.75) !important;
+  }
+  .window-control-area .q-icon {
+    color: white !important;
+  }
+  .recent-contact-item {
+    background-color: rgb(255, 255, 255, 0.1) !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #app > .container::before {
+    background-image: var(--light_background-img) !important;
+  }
+
+  .recent-contact-item {
+    background-color: rgb(0, 0, 0, 0.1) !important;
+  }
+  .window-control-area:hover {
+    opacity: 100%;
+    background-color: rgb(255, 255, 255, 0.75) !important;
+  }
+  .window-control-area .q-icon {
+    color: black !important;
+  }
+}
+.message-content__wrapper .message-link-preview span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.gray-tip-content.gray-tip-element {
+  font-size: unset !important;
+}
+.recent-contact-item:hover {
+  background-color: unset !important;
+}
+.recent-contact-item.list-item--selected .list-item__content {
+  background-color: unset !important;
+}
+html .sidebar-nav {
+  background-color: #0000 !important;
+}
+.sidebar-nav .q-icon {
+  color: unset !important;
+}
+.send-btn-wrap {
+  background-color: rgb(234, 234, 234, 0.7) !important;
+}
+.msg-content-container.container--self,
+.message-content__wrapper {
+  background-color: transparent !important;
+}
+html.mspring_force_host_bubble_color
+  #app
+  .chat-msg-area
+  .ml-list
+  .message
+  .msg-content-container.container--self {
+  background: none !important;
+}
