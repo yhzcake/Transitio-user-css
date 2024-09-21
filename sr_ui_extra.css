@@ -30,7 +30,7 @@
     .msg-content-container:not(.mix-message__container--market-face):not(
       .mix-message__container--pic
     ) {
-    /* 修改对方气泡颜色为邮件颜色,并调整字体颜色 */
+    /* 修改对方气泡颜色为暗色,并调整字体颜色 */
     background: rgb(38, 38, 38) !important;
     .message-content,
     .message-content span {
@@ -55,13 +55,6 @@
   }
   .window-control-area .q-icon {
     color: black !important;
-  }
-  .ml-list
-    .msg-content-container:not(.mix-message__container--market-face):not(
-      .mix-message__container--pic
-    ) {
-    /* 修改对方气泡颜色为邮件颜色 */
-    background: rgb(255, 255, 255) !important;
   }
 }
 /* Link Preview字体颜色调整 */
@@ -99,6 +92,17 @@ html .sidebar-nav {
 .message-content__wrapper {
   background-color: transparent !important;
 }
+.ark-msg-content-container {
+  background-color: transparent !important;
+  padding: 0 0 0 !important;
+  box-shadow: none !important;
+}
+.container--self.ark-msg-content-container {
+  border-image: none !important;
+  border-width: 0 0 0 0 !important;
+  border: 0 0 0 !important;
+}
+
 html.mspring_force_host_bubble_color
   #app
   .tab-container
