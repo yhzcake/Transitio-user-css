@@ -1,0 +1,116 @@
+/* ==UserStyle==
+@name           StarRailUIExtra
+@description    针对安装仿星穹铁道短信UI与其他主题冲突及部分特性进行修改
+@preprocessor   transitio
+@version        1.0
+@homepageURL    https://github.com/yhzcake/Transitio-user-css/#sr_ui_extra
+@author         yhz_cake
+@license     	  gpl-3.0
+@var raw light_background-img "亮色背景图" "url()"
+@var raw dark_background-img "暗色背景图" "url()"
+==/UserStyle== */
+@media (prefers-color-scheme: dark) {
+  /* 暗色背景图 */
+  #app > .container::before {
+    content: " ";
+    background-image: var(--dark_background-img) !important;
+  }
+  /* 窗口控制区域调整 */
+  .window-control-area:hover {
+    opacity: 100%;
+    background-color: rgb(0, 0, 0, 0.75) !important;
+  }
+  .window-control-area .q-icon {
+    color: white !important;
+  }
+  /* 历史聊天列表项背景颜色 */
+  .recent-contact-item {
+    background-color: rgb(255, 255, 255, 0.1) !important;
+  }
+  .ml-list
+    .msg-content-container:not(.mix-message__container--market-face):not(
+      .mix-message__container--pic
+    ) {
+    /* 修改对方气泡颜色为暗色,并调整字体颜色 */
+    background: rgb(38, 38, 38) !important;
+    .message-content,
+    .message-content span {
+      color: rgba(255, 255, 255, 0.417);
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  /* 亮色背景色 */
+  #app > .container::before {
+    content: " ";
+    background-image: var(--light_background-img) !important;
+  }
+  /* 历史聊天列表背景色调整 */
+  .recent-contact-item {
+    background-color: rgb(0, 0, 0, 0.1) !important;
+  }
+  /* 窗口控制区域调整 */
+  .window-control-area:hover {
+    opacity: 100%;
+    background-color: rgb(255, 255, 255, 0.75) !important;
+  }
+  .window-control-area .q-icon {
+    color: black !important;
+  }
+}
+/* Link Preview字体颜色调整 */
+.message-content__wrapper .message-link-preview span {
+  color: rgba(255, 255, 255, 0.5);
+}
+.message-content__wrapper .message-link-preview__error span {
+  color: rgba(255, 104, 104, 1);
+}
+/* 撤回字体大小调整 */
+.gray-tip-content.gray-tip-element {
+  font-size: unset !important;
+}
+/* 历史聊天列表项调整 */
+.recent-contact-item:hover {
+  background-color: unset !important;
+}
+.recent-contact-item.list-item--selected .list-item__content {
+  background-color: unset !important;
+}
+/* 侧边栏背景色透明 */
+html .sidebar-nav {
+  background-color: #0000 !important;
+}
+/* 侧边栏图标颜色调整 */
+.sidebar-nav .q-icon {
+  color: unset !important;
+}
+/* 发送按钮颜色调整 */
+.send-btn-wrap {
+  background-color: rgb(234, 234, 234, 0.7) !important;
+}
+/* 自己气泡颜色调为透明 */
+.msg-content-container.container--self,
+.message-content__wrapper {
+  background-color: transparent !important;
+}
+.ark-msg-content-container {
+  background-color: transparent !important;
+  padding: 0 0 0 !important;
+  box-shadow: none !important;
+}
+.container--self.ark-msg-content-container {
+  border-image: none !important;
+  border-width: 0 0 0 0 !important;
+  border: 0 0 0 !important;
+}
+
+html.mspring_force_host_bubble_color
+  #app
+  .tab-container
+  .chat-msg-area
+  .ml-list
+  .message
+  .msg-content-container.container--self {
+  background: none !important;
+}
