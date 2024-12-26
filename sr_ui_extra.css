@@ -2,12 +2,19 @@
 @name           StarRailUIExtra
 @description    针对安装仿星穹铁道短信UI与其他主题冲突及部分特性进行修改
 @preprocessor   transitio
-@version        1.1
+@version        1.0
 @homepageURL    https://github.com/yhzcake/Transitio-user-css/#sr_ui_extra
 @author         yhz_cake
 @license     	  gpl-3.0
+@var raw light_background-img "亮色背景图" "url()"
+@var raw dark_background-img "暗色背景图" "url()"
 ==/UserStyle== */
 @media (prefers-color-scheme: dark) {
+  /* 暗色背景图 */
+  #app > .container::before {
+    content: " ";
+    background-image: var(--dark_background-img) !important;
+  }
   /* 窗口控制区域调整 */
   .window-control-area:hover {
     opacity: 100%;
@@ -34,6 +41,11 @@
 }
 
 @media (prefers-color-scheme: light) {
+  /* 亮色背景色 */
+  #app > .container::before {
+    content: " ";
+    background-image: var(--light_background-img) !important;
+  }
   /* 历史聊天列表背景色调整 */
   .recent-contact-item {
     background-color: rgb(0, 0, 0, 0.1) !important;
